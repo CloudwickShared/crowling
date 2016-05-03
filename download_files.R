@@ -3,6 +3,7 @@ library(base64)
 
 #list of files in the folder
 list.files()
+#takes the files from the specified folder
 file = list.files(pattern = "\\.htm$") 
 length(file)
 # paste the link here
@@ -29,6 +30,8 @@ for (p in 1 : length(file))
   }
   
  system(sprintf("convert output/imagefiles_%03i/*.png output/imagefiles_%03i.pdf",p,p))
+ #remove the directories which are created
+ unlink(sprintf("output/imagefiles_%03i",p,p), recursive = TRUE, force = TRUE)
 }
 
 
