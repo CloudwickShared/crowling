@@ -1,6 +1,10 @@
 library(base64enc)
 library(base64)
 
+#download the file directly from the sync
+##wget_string="wget -x -O example.html --load-cookies cookies.txt http://sync.cloudwick.com/training/track/5673b98ad9c6e40696000002/topic/56762f9cd9c6e471f6000002/subtopic/56b2467bd9c6e49e69000008/ss"
+##system(wget_string,intern=TRUE)
+
 #list of files in the folder
 list.files()
 #takes the files from the specified folder
